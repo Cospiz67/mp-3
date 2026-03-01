@@ -9,7 +9,7 @@ const StyledFooter= styled.div`
 export default function Footer(){
     return(
         <StyledFooter>
-            <p>All Rights Reserved by Jeanne Durand <a href = "https://creativecommons.org/licenses/by-nc-nd/4.0/">Credits</a> &copy </p>
+            <p>All Rights Reserved by Jeanne Durand <a href = "https://creativecommons.org/licenses/by-nc-nd/4.0/">Credits</a> &copy; </p>
         </StyledFooter>
     )
 }
