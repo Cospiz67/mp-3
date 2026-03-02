@@ -26,7 +26,9 @@ const StyledLi = styled.li`
         display: inline;
         padding: 0 2%;
     }
-    
+`
+
+const StyledA = styled.a`
     &:hover{
         color: rgb(206, 214, 233);
         cursor: pointer;
@@ -37,12 +39,12 @@ export default function Nav(){
     return (
             <StyledNav>
                 <StyledUl>
-                    <StyledLi>Home</StyledLi>
-                    <StyledLi>About me</StyledLi>
-                    <StyledLi>Projects</StyledLi>
-                    <StyledLi>Experiences</StyledLi>
-                    <StyledLi>Certifications</StyledLi>
-                    <StyledLi>Contact</StyledLi>
+                    <StyledLi><StyledA href ="/">Home</StyledA></StyledLi>
+                    <StyledLi><StyledA href ="/about-me">About me</StyledA></StyledLi>
+                    <StyledLi><StyledA href ="/projects">Projects</StyledA></StyledLi>
+                    <StyledLi><StyledA href ="/experiences">Experiences</StyledA></StyledLi>
+                    <StyledLi><StyledA href ="/certifications">Certifications</StyledA></StyledLi>
+                    <StyledLi><StyledA href ="/contact">Contact</StyledA></StyledLi>
                 </StyledUl>
             </StyledNav>
     ) 
