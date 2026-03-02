@@ -26,6 +26,11 @@ const StyledLi = styled.li`
         display: inline;
         padding: 0 2%;
     }
+    
+    &:hover{
+        color: rgb(206, 214, 233);
+        cursor: pointer;
+    }
 `
 
 export default function Nav(){

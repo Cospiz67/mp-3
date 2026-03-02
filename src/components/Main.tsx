@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Home from "./Home";
 
 const StyledMain = styled.main`
     min-height: 100vh;
@@ -8,7 +9,7 @@ const StyledMain = styled.main`
 export default function Main(){
     return(
         <StyledMain>
-            
+            <Home/>
         </StyledMain>
     )
 }
