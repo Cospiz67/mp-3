@@ -14,8 +14,8 @@ const StyledButton= styled.a`
     }
 `
 
-export default function ViewMoreButton(props:{href: string, text: string}){
+export default function ViewMoreButton(props:{href: string, text: string, target?: boolean}){
     return(
-        <StyledButton href = {props.href}>{props.text}</StyledButton>
+        <StyledButton target={props.target === true? "_blank": "_self"} href={props.href}>{props.text}</StyledButton>
     )
 }
