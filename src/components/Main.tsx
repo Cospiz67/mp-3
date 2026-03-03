@@ -3,6 +3,7 @@ import Home from "./Home";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Experience from "./Experience";
+import Certifications from "./certifications";
 
 const StyledMain = styled.main`
     min-height: 100vh;
@@ -12,7 +13,7 @@ const StyledMain = styled.main`
 export default function Main(){
     return(
         <StyledMain>
-            <Experience/>
+            <Certifications/>
         </StyledMain>
     )
 }

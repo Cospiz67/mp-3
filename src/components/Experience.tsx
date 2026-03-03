@@ -67,65 +67,65 @@ export default function Experience(){
     return(
         <>
             <StyledTitleH3>I gained experience by using those tools:</StyledTitleH3>
-                    <StyledGrid>
-                        <GridElement src ="./logo angular.png" alt = "Angular"/>
-                        <GridElement src = "./logo blender.png" alt = "Blender"/>
-                        <GridElement src = "./logo c.png" alt = "C"/>
-                        <GridElement src = "./logo cSharp.png" alt = "C#"/>
-                        <GridElement src = "./logo css.png" alt = "CSS"/>
-                        <GridElement src = "./logo devExpress.png" alt = "DevExpress"/>
-                        <GridElement src = "./logo git.png" alt = "Git"/>
-                        <GridElement src = "./logo github.png" alt = "GitHub"/>
-                        <GridElement src = "./logo js.png" alt = "JavaScript"/>
-                        <GridElement src = "./logo html.png" alt = "HTML"/>
-                        <GridElement src = "./logo ocaml.png" alt = "Ocaml"/>
-                        <GridElement src = "./logo mySQL.png" alt = "MySQL"/>
-                        <GridElement src = "./logo python.png" alt = "Python"/>
-                        <GridElement src = "./logo typescript.png" alt = "TypeScript"/>
-                        <GridElement src = "./logo unity.png" alt = "Unity"/>
-                    </StyledGrid>
-                    <StyledOverview>
-                        <StyledOverviewTitle>
-                            <StyledH3>Internships</StyledH3>
-                            <StyledHr/> 
-                        </StyledOverviewTitle>
-                    </StyledOverview>
-                    <StyledOneProject>
-                        <TextSection>
-                            <StyledOneProjectImg src = "./sncf logo.png" alt = "Logo SNCF"/>
-                            <StyledOneProjectP>2 months in 2025</StyledOneProjectP>
-                        </TextSection>
-                        <StyledOneProjectP>At SNCF, I learnt how to use new programming
-                            languages such as HTML, CSS, JavaScript. I also
-                            discovered how to cooperate in a large company,
-                            as I was participating in the IT meetings.
-                        </StyledOneProjectP>
-                    </StyledOneProject>
-                    <StyledOneProject>
-                        <StyledOneProjectP>At Beaupeyrat, renewing the computer
-                            park of the high school was my main
-                            task. I was making the network
-                            connections between the computers and
-                            the computer servers of the school.
-                        </StyledOneProjectP>
-                        <TextSection>
-                            <StyledOneProjectImg src = "./beaupeyrat logo.png" alt = "Logo beaupeyrat"/>
-                            <StyledOneProjectP>1 month in 2022</StyledOneProjectP>
-                        </TextSection>
-                    </StyledOneProject>
-                    <StyledOneProject>
-                        <TextSection>
-                            <StyledOneProjectImg src = "./winston logo.png" alt = "Logo Winston & Strawn"/>
-                            <StyledOneProjectP>2 weeks in 2021</StyledOneProjectP>
-                        </TextSection>
-                        <StyledOneProjectP>
-                            At Winston & Strawn, I was in charge of the
-                            inventory management of computer
-                            equipments. I was directly linked to
-                            customers. Therefore, I had to learn to
-                            satisfy them in the shortest possible time
-                        </StyledOneProjectP>
-                    </StyledOneProject>
+            <StyledGrid>
+                <GridElement src ="./logo angular.png" alt = "Angular"/>
+                <GridElement src = "./logo blender.png" alt = "Blender"/>
+                <GridElement src = "./logo c.png" alt = "C"/>
+                <GridElement src = "./logo cSharp.png" alt = "C#"/>
+                <GridElement src = "./logo css.png" alt = "CSS"/>
+                <GridElement src = "./logo devExpress.png" alt = "DevExpress"/>
+                <GridElement src = "./logo git.png" alt = "Git"/>
+                <GridElement src = "./logo github.png" alt = "GitHub"/>
+                <GridElement src = "./logo js.png" alt = "JavaScript"/>
+                <GridElement src = "./logo html.png" alt = "HTML"/>
+                <GridElement src = "./logo ocaml.png" alt = "Ocaml"/>
+                <GridElement src = "./logo mySQL.png" alt = "MySQL"/>
+                <GridElement src = "./logo python.png" alt = "Python"/>
+                <GridElement src = "./logo typescript.png" alt = "TypeScript"/>
+                <GridElement src = "./logo unity.png" alt = "Unity"/>
+            </StyledGrid>
+            <StyledOverview>
+                <StyledOverviewTitle>
+                    <StyledH3>Internships</StyledH3>
+                    <StyledHr/> 
+                </StyledOverviewTitle>
+            </StyledOverview>
+            <StyledOneProject>
+                <TextSection>
+                    <StyledOneProjectImg src = "./sncf logo.png" alt = "Logo SNCF"/>
+                    <StyledOneProjectP>2 months in 2025</StyledOneProjectP>
+                </TextSection>
+                <StyledOneProjectP>At SNCF, I learnt how to use new programming
+                    languages such as HTML, CSS, JavaScript. I also
+                    discovered how to cooperate in a large company,
+                    as I was participating in the IT meetings.
+                </StyledOneProjectP>
+            </StyledOneProject>
+            <StyledOneProject>
+                <StyledOneProjectP>At Beaupeyrat, renewing the computer
+                    park of the high school was my main
+                    task. I was making the network
+                    connections between the computers and
+                    the computer servers of the school.
+                </StyledOneProjectP>
+                <TextSection>
+                    <StyledOneProjectImg src = "./beaupeyrat logo.png" alt = "Logo beaupeyrat"/>
+                    <StyledOneProjectP>1 month in 2022</StyledOneProjectP>
+                </TextSection>
+            </StyledOneProject>
+            <StyledOneProject>
+                <TextSection>
+                    <StyledOneProjectImg src = "./winston logo.png" alt = "Logo Winston & Strawn"/>
+                    <StyledOneProjectP>2 weeks in 2021</StyledOneProjectP>
+                </TextSection>
+                <StyledOneProjectP>
+                    At Winston & Strawn, I was in charge of the
+                    inventory management of computer
+                    equipments. I was directly linked to
+                    customers. Therefore, I had to learn to
+                    satisfy them in the shortest possible time
+                </StyledOneProjectP>
+            </StyledOneProject>
         </>
     )
 }
