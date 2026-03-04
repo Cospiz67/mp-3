@@ -12,7 +12,6 @@ const StyledOneProject = styled.div`
     padding: 1% 2%;
     margin: auto;
 `
-
 const StyledOneProjectImg = styled.img`
     margin: 2%;
     width: 20vw;
@@ -21,7 +20,6 @@ const StyledOneProjectImg = styled.img`
     object-fit: contain;
 
 `
-
 const TextSection = styled.div`
     width: 60%;
     text-align: justify;
@@ -30,7 +28,6 @@ const TextSection = styled.div`
     display: flex;
     flex-direction: column;
 `
-
 const ImgCapigame = styled.img`
     width:10vw;
     margin: 2%;
@@ -38,7 +35,6 @@ const ImgCapigame = styled.img`
     border-radius: 10px;
     object-fit: contain;
 `
-
 const ToolkitImg = styled.img`
     width: 4vw;
 `
@@ -53,7 +49,6 @@ const Toolkit = styled.ul`
     justify-content: center;
     margin: 1%;
 `
-
 const StyledOverviewTitle = styled.div`
     width:100%;
 `

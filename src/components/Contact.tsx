@@ -19,13 +19,11 @@ const StyledOverviewA = styled.a`
         border: 5px solid rgb(206, 214, 233);
         border-radius: 5%;
 `
-
 const StyledText = styled.p`
     width:50%;
     text-align: center;
     margin:auto;
 `
-
 
 export default function Contact(){
     return(

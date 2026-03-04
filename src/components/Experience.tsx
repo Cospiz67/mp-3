@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import GridElement from "./GridElement";
+import {StyledOverview, StyledOverviewTitle, StyledH3, StyledHr} from "./StyledComponents";
 
 const StyledTitleH3 = styled.h3`
     text-align: center;
@@ -10,31 +11,6 @@ const StyledGrid = styled.div`
     grid-template-columns: auto auto auto auto auto;
     margin: 2% 0;
 `
-const StyledOverview = styled.div`
-    display:flex;
-    flex-direction: column;
-`
-const StyledOverviewTitle = styled.div`
-    display: flex;
-    margin: 1% 4%;
-    justify-content: center;
-`
-
-const StyledH3 = styled.h3`
-    width: max-content;
-    margin: 0 2%;
-`
-
-const StyledHr = styled.hr`
-    width: 60%;
-    margin: auto 0;
-    color: rgb(55, 97, 189);
-    background-color: rgb(55, 97, 189);
-    height: 5px;
-    border: none;
-    border-radius: 5px;
-`
-
 const StyledOneProject = styled.div`
     display: flex;
     flex-direction: row;
@@ -47,7 +23,6 @@ const TextSection = styled.div`
     display: flex;
     flex-direction: column;
 `
-
 const StyledOneProjectImg = styled.img`
     margin: 2%;
     width: 20vw;
@@ -55,7 +30,6 @@ const StyledOneProjectImg = styled.img`
     border-radius: 10px;
     object-fit: contain;
 `
-
 const StyledOneProjectP = styled.p`
     width: 60%;
     text-align: justify;

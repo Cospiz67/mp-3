@@ -1,29 +1,8 @@
 import styled from "styled-components";
 import ViewMoreButton from "./ViewMoreButton";
+import { StyledPres, TextSection,
+    StyledOverview, StyledOverviewTitle, StyledH3, StyledHr} from "./StyledComponents";
 
-const StyledPres = styled.div`
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 2% 0;
-    position:relative;
-
-    @media screen and (max-width: 750px){
-        flex-direction: column;
-    }
-`
-const TextSection = styled.div`
-    margin: auto 0;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (max-width: 750px){
-        width:70%;
-        margin: 0 auto;
-    }
-`
 const StyledImg = styled.img`
     width: 15vw;
     height:auto;
@@ -35,28 +14,6 @@ const StyledImg = styled.img`
         margin: auto;
     }
 `
-const StyledOverview = styled.div`
-    display:flex;
-    flex-direction: column;
-`
-const StyledOverviewTitle = styled.div`
-    display: flex;
-    margin: 1% 4%;
-    justify-content: center;
-`
-const StyledH3 = styled.h3`
-    width: max-content;
-    margin: 0 2%;
-`
-const StyledHr = styled.hr`
-    width: 60%;
-    margin: auto 0;
-    color: rgb(55, 97, 189);
-    background-color: rgb(55, 97, 189);
-    height: 5px;
-    border: none;
-    border-radius: 5px;
-`
 const StyledGrid = styled.div`
     display:grid;
     grid-template-columns: auto auto auto;
@@ -66,14 +23,12 @@ const StyledOneProject = styled.div`
     width: 20vw;
     margin: auto;
 `
-
 const StyledOneProjectImg = styled.img`
     width: 20vw;
     height: auto;
     border-radius: 10px;
     object-fit: contain; /*will avoid distortion*/
 `
-
 const StyledGridElement = styled.div`
     text-align: center;
     margin: 2%;
@@ -82,16 +37,23 @@ const StyledGridImg = styled.img`
     width: 5vw;
     height: auto;
 `
-
 const StyledOneCertif = styled.div`
     width: 20vw;
     margin: auto;
     text-align: center;
 `
-
 const StyledOneCertifImg = styled.img`
     width: 10vw;
     height: auto;
+`
+const StyledDoodles = styled.div`
+    z-index: -10;
+    animation: float 3s ease-in-out infinite;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
 `
 
 export default function Home(){
@@ -99,6 +61,14 @@ export default function Home(){
         <>
             <title>Home | Resume</title>
             <StyledPres>
+                <StyledDoodles>
+                    <img id="doodle-link" src="./link.png" alt="Doodle of a Link"/>
+                    <img id="doodle-brackets" src="./curly brackets.png" alt="Doodle of curly brackets"/>
+                    <img id="doodle-wifi" src="./wifi.png" alt="Doodle of Wifi"/>
+                    <img id="doodle-arobase" src="./arobase.png" alt="Doodle of Arobase"/>
+                    <img id="doodle-code" src="./code.png" alt="Doodle of code logo"/>
+                    <img id="doodle-net" src="./net.png" alt ="Doodle of Net"/>
+                </StyledDoodles>
                 <StyledImg src="./myPicture.jpg" alt="Picture of Jeanne Durand"/>
                 <TextSection>
                     <p>Hi! My name is </p>

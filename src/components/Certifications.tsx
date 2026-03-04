@@ -1,31 +1,5 @@
 import styled from "styled-components";
-
-
-const StyledOverview = styled.div`
-    display:flex;
-    flex-direction: column;
-`
-
-const StyledOverviewTitle = styled.div`
-    display: flex;
-    margin: 1% 4%;
-    justify-content: center;
-`
-
-const StyledH3 = styled.h3`
-    width: max-content;
-    margin: 0 2%;
-`
-
-const StyledHr = styled.hr`
-    width: 60%;
-    margin: auto 0;
-    color: rgb(55, 97, 189);
-    background-color: rgb(55, 97, 189);
-    height: 5px;
-    border: none;
-    border-radius: 5px;
-`
+import {StyledOverview, StyledOverviewTitle, StyledH3, StyledHr} from "./StyledComponents";
 
 const StyledOneProject = styled.div`
     display: flex;
@@ -33,7 +7,6 @@ const StyledOneProject = styled.div`
     padding: 2%;
     margin: auto;
 `
-
 const StyledOneProjectImg = styled.img`
     margin: 0 2%;
     border-radius: 0;
@@ -41,20 +14,17 @@ const StyledOneProjectImg = styled.img`
     height: auto;
     object-fit: contain;
 `
-
 const StyledOneProjectP = styled.p`
     width: 60%;
     text-align: justify;
     padding: 2%;
     margin: auto;
 `
-
 const StyledIntroText = styled.p`
     margin:auto;
     text-align: justify;
     width: 80%;    
 `
-
 const OneSpecificCertif = styled.img`
     margin: 0 2%;
     border-radius: 0;

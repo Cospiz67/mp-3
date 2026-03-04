@@ -7,3 +7,46 @@ a{
     text-decoration: none;
     color: black;
 }
+
+#doodle-arobase{
+    position: absolute;
+    top: 2%;
+    right: 15%;
+    width:3vw;
+}
+#doodle-code{
+    position: absolute;
+    top: 45%;
+    right: 2%;
+    width:10vw;
+}
+#doodle-net{
+    position: absolute;
+    top: 85%;
+    right: 10%;
+    width:6vw;
+}
+
+#doodle-link{
+    position: absolute;
+    top: 1%;
+    left: 3%;
+    width:4vw;
+}
+#doodle-brackets{
+    position: absolute;
+    top: 35%;
+    left: 12%;
+    width:8vw;
+}
+#doodle-wifi{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    width:5vw;
+}
+
+/*animation of the doodles*/
+@keyframes float {
+    50% {translate: 0 1vh;} /*will move the doodle 0 right/left but 1vh to the top*/
+}
