@@ -1,8 +1,14 @@
-import {createBrowserRouter, Routes} from "react-router";
+import {createBrowserRouter, Routes, Route} from "react-router";
 import styled from "styled-components";
 import Header from "./Header";
 import Footer from "./Footer";
 import Nav from "./Nav";
+import Home from "./Home";
+import AboutMe from "./AboutMe";
+import Projects from "./Projects";
+import Experience from "./Experience";
+import Certifications from "./Certifications";
+import Contact from "./Contact";
 
 const Wrapper = styled.div`
   width: 80vw;
@@ -22,6 +28,10 @@ const NavMainWrapper= styled.div`
         flex-direction: column;
     }
 `
+const StyledMain = styled.main`
+    min-height: 100vh;
+    width:100%;
+`
 
 function Root(){
     return(
@@ -30,9 +40,16 @@ function Root(){
                 <Header/>
                 <NavMainWrapper>
                     <Nav/>
-                    <Routes>
-                        <Route path={`/`} element={<Home/>}/>
-                    </Routes>
+                    <StyledMain>
+                        <Routes>
+                            <Route path={`/`} element={<Home/>}/>
+                            <Route path={`/about-me`} element={<AboutMe/>}/>
+                            <Route path={`/projects`} element={<Projects/>}/>
+                            <Route path={`/experiences`} element={<Experience/>}/>
+                            <Route path={`/certifications`} element={<Certifications/>}/>
+                            <Route path={`/contact`} element={<Contact/>}/>
+                        </Routes>
+                    </StyledMain>
                 </NavMainWrapper>
                 <Footer/>
             </Wrapper>
