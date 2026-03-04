@@ -66,6 +66,7 @@ const OneSpecificCertif = styled.img`
 export default function Certifications(){
     return(
         <>
+            <title>Certifications | Resume</title>
             <StyledOverview>
                 <StyledOverviewTitle>
                     <StyledH3>Linguistic Certifications</StyledH3>

@@ -30,6 +30,7 @@ const StyledText = styled.p`
 export default function Contact(){
     return(
         <>
+            <title>Contact | Resume</title>
             <StyledTitleH3>If you have any questions, feel free to contact me!</StyledTitleH3>
             <StyledOverview>
                 <StyledOverviewA href ="https://www.linkedin.com/in/jeannedrd/" target="_blank">

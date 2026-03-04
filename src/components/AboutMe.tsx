@@ -82,7 +82,8 @@ const StyledSeparationContentP = styled.p`
 
 export default function AboutMe(){
     return(
-        <>
+        <>  
+            <title>about-me | Resume</title>
             <StyledPres>
                 <StyledImg src="./myPicture.jpg" alt="Picture of Jeanne Durand"/>
                 <TextSection>

@@ -3,7 +3,7 @@ import Home from "./Home";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Experience from "./Experience";
-import Certifications from "./certifications";
+import Certifications from "./Certifications";
 import Contact from "./Contact";
 
 const StyledMain = styled.main`
@@ -14,7 +14,7 @@ const StyledMain = styled.main`
 export default function Main(){
     return(
         <StyledMain>
-            <Contact/>
+            <Home/>
         </StyledMain>
     )
 }

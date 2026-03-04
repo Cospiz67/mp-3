@@ -23,7 +23,7 @@ const NavMainWrapper= styled.div`
     }
 `
 
-function App() {
+export default function App() {
   return (
     <>
       <Wrapper>
@@ -38,5 +38,3 @@ function App() {
     </>
   )
 }
-
-export default App

@@ -66,6 +66,7 @@ const StyledOneProjectP = styled.p`
 export default function Experience(){
     return(
         <>
+            <title>Experience | Resume</title>
             <StyledTitleH3>I gained experience by using those tools:</StyledTitleH3>
             <StyledGrid>
                 <GridElement src ="./logo angular.png" alt = "Angular"/>

@@ -61,6 +61,7 @@ const StyledOverviewTitle = styled.div`
 export default function Projects(){
     return(
         <>
+            <title>Projects | Resume</title>
             <StyledH2>Here are some of my projects:</StyledH2>
                     <StyledOneProject>
                         <StyledOneProjectImg src = "./subway out.png" alt = "Picture of SubWay Out"/>

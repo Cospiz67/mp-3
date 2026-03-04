@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router";
 
 const StyledNav = styled.nav`
     background-color: rgb(91, 103, 130);
@@ -28,7 +29,7 @@ const StyledLi = styled.li`
     }
 `
 
-const StyledA = styled.a`
+const StyledLink = styled(Link)`
     &:hover{
         color: rgb(206, 214, 233);
         cursor: pointer;
@@ -39,12 +40,12 @@ export default function Nav(){
     return (
             <StyledNav>
                 <StyledUl>
-                    <StyledLi><StyledA href ="/">Home</StyledA></StyledLi>
-                    <StyledLi><StyledA href ="/about-me">About me</StyledA></StyledLi>
-                    <StyledLi><StyledA href ="/projects">Projects</StyledA></StyledLi>
-                    <StyledLi><StyledA href ="/experiences">Experiences</StyledA></StyledLi>
-                    <StyledLi><StyledA href ="/certifications">Certifications</StyledA></StyledLi>
-                    <StyledLi><StyledA href ="/contact">Contact</StyledA></StyledLi>
+                    <StyledLi><StyledLink to ="/">Home</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to ="/about-me">About me</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to ="/projects">Projects</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to ="/experiences">Experiences</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to ="/certifications">Certifications</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to ="/contact">Contact</StyledLink></StyledLi>
                 </StyledUl>
             </StyledNav>
     ) 

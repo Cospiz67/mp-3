@@ -97,6 +97,7 @@ const StyledOneCertifImg = styled.img`
 export default function Home(){
     return(
         <>
+            <title>Home | Resume</title>
             <StyledPres>
                 <StyledImg src="./myPicture.jpg" alt="Picture of Jeanne Durand"/>
                 <TextSection>
