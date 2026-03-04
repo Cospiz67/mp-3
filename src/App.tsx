@@ -26,14 +26,6 @@ const NavMainWrapper= styled.div`
 export default function App() {
   return (
     <>
-      <Wrapper>
-        <Header/>
-        <NavMainWrapper>
-          <Nav/>
-          <Main/>
-        </NavMainWrapper>
-        <Footer/>
-      </Wrapper>
       
     </>
   )
