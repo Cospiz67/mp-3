@@ -1,5 +1,7 @@
+import { useState } from "react";
 import styled from "styled-components";
 import ViewMoreButton from "./ViewMoreButton";
+import { StyledH3, StyledHr } from "./StyledComponents";
 
 const StyledH2 = styled.h2`
     text-align: center;
@@ -11,6 +13,10 @@ const StyledOneProject = styled.div`
     width:100%;
     padding: 1% 2%;
     margin: auto;
+
+    @media screen and (max-width: 750px){
+        flex-direction: column;
+    } 
 `
 const StyledOneProjectImg = styled.img`
     margin: 2%;
@@ -19,6 +25,9 @@ const StyledOneProjectImg = styled.img`
     border-radius: 10px;
     object-fit: contain;
 
+    @media screen and (max-width: 750px){
+        margin: auto;
+    }
 `
 const TextSection = styled.div`
     width: 60%;
@@ -48,12 +57,145 @@ const Toolkit = styled.ul`
     padding-left: 0;
     justify-content: center;
     margin: 1%;
+
+    @media screen and (max-width: 750px){
+        flex-direction: column;
+    }
 `
 const StyledOverviewTitle = styled.div`
     width:100%;
+    display: flex;
+    margin: 1% 4%;
+    justify-content: center;
+`
+const StyledCalculator = styled.div`
+    background-color: rgb(178,217,234);
+    border-radius: 15px;
+    margin:3% auto;
+    width:50%;
+    height:min-content;
+    padding:2%;
+`
+const StyledCalcElement = styled.div`
+    margin:5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+`
+const StyledInput = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 0 3%;
+    width:50%;
+    font-size: calc(2px + 1.3vw);
+    
+    input{
+        border-radius: 7px;
+        border: none;
+        margin: 5% 0;
+        background-color:rgb(234,227, 219);
+        padding: 3%;
+        font-size: calc(2px + 1.3vw);
+
+        &:focus{
+        outline: 2px solid rgb(55, 97, 189);
+        }
+        
+        &:hover{
+            background-color: rgb(223, 217, 210);
+        }
+    }
+`
+const StyledOutput = styled.p`
+    margin:auto;
+    text-align: center;
+    background-color:rgb(234,227, 219);
+    border-radius:5px;
+    width:50%;
+
+    color: ${props=> props.color === true ? "red": "black"};
+`
+const StyledCalcElementButton = styled.button`
+    margin:3%;
+    padding: 4%;
+    background-color: rgb(234,227, 219);
+    border: 2px solid rgb(55, 97, 189) ;
+    border-radius:20px;
+    font-size: calc(2px + 1.3vw);
+    
+    &:hover{
+        background-color: rgb(223, 217, 210);
 `
 
 export default function Projects(){
+
+    const [input1, setInput1] = useState("");
+    const [input2, setInput2] = useState("");
+    const [output, setOutput] = useState("");
+    const [isRed, setColor] = useState(false);
+
+    function clearFunction()
+    {
+        setInput1("");
+        setInput2("");
+        setOutput("");
+    }
+
+    function isNegative()
+    {
+        if(Number(output) <0)
+            setColor(true);
+        else
+            setColor(false);
+    }
+
+    function addition()
+    {
+        setOutput(String(Number(input1)+ Number(input2)));
+        isNegative();
+    }
+
+    function substraction()
+    {
+        setOutput(String(Number(input1)- Number(input2)));
+        isNegative();
+    }
+
+    function multiplication()
+    {
+        setOutput(String(Number(input1) * Number(input2)));
+        isNegative();
+    }
+
+    function division()
+    {
+        setOutput(String(Number(input1)/ Number(input2)));
+        isNegative();
+    }
+
+    function power()
+    {
+        let firstInput = Number(input1);
+        let secondInput = Number(input2);
+        let negativePower = false;
+        if(secondInput<0)
+        {
+            negativePower= true;
+            secondInput *= (-1);
+        }
+
+        let ans = 1;
+        for(let i=0; i<secondInput; i++)
+        {
+            ans*=firstInput;
+        }
+        if(negativePower===true)
+            ans = 1/ans;
+
+        setOutput(String(ans));
+        isNegative();
+    }
+
     return(
         <>
             <title>Projects | Resume</title>
@@ -183,9 +325,33 @@ export default function Projects(){
                         <ToolkitLi><p>Result Saving & Displaying</p></ToolkitLi>
                     </Toolkit>
                     <StyledOverviewTitle>
-                        <h3>Calculator</h3>
-                        <hr/>
+                        <StyledH3>Calculator</StyledH3>
+                        <StyledHr/>
                     </StyledOverviewTitle>
+                    <StyledCalculator>
+                        <StyledCalcElement>
+                            <StyledInput>
+                                <label htmlFor= "first-input">Enter first number: </label>
+                                <input id ="first-input"placeholder ="Enter first number" value={input1} onChange={(e)=>setInput1(e.target.value)}/>
+                            </StyledInput>
+                            <StyledInput>
+                                <label htmlFor= "second-input">Enter second number: </label>
+                                <input id ="second-input"placeholder ="Enter second number" value ={input2} onChange={(e)=>setInput2(e.target.value)}/>
+                            </StyledInput>  
+                        </StyledCalcElement>
+                        <StyledCalcElement>
+                            <p>Result:</p>
+                            <StyledOutput color ={isRed}>{output}</StyledOutput>
+                        </StyledCalcElement>
+                        <StyledCalcElement>
+                            <StyledCalcElementButton onClick={addition}> + </StyledCalcElementButton>
+                            <StyledCalcElementButton onClick={substraction}> - </StyledCalcElementButton>
+                            <StyledCalcElementButton onClick={multiplication}> * </StyledCalcElementButton>
+                            <StyledCalcElementButton onClick={division}> / </StyledCalcElementButton>
+                            <StyledCalcElementButton onClick={power}> ** </StyledCalcElementButton>
+                            <StyledCalcElementButton onClick={clearFunction}> Clear </StyledCalcElementButton>
+                        </StyledCalcElement>
+                    </StyledCalculator>
         </>
     )
 }
