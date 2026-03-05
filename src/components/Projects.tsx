@@ -163,8 +163,6 @@ export default function Projects(){
                 setColor(true);
             else
                 setColor(false);
-            console.log("isRed: "+isRed);
-            console.log("Output: " + Number(output));
     },[output]);
 
     function clearFunction()
