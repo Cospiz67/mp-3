@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import ViewMoreButton from "./ViewMoreButton";
 import { StyledH3, StyledHr } from "./StyledComponents";
@@ -36,6 +36,10 @@ const TextSection = styled.div`
     margin: auto 0;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 750px){
+        margin: 0 auto;
+    }
 `
 const ImgCapigame = styled.img`
     width:10vw;
@@ -43,6 +47,10 @@ const ImgCapigame = styled.img`
     height: auto;
     border-radius: 10px;
     object-fit: contain;
+
+    @media screen and (max-width: 750px) {
+        margin: auto;
+    }
 `
 const ToolkitImg = styled.img`
     width: 4vw;
@@ -81,6 +89,11 @@ const StyledCalcElement = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    @media screen and (max-width: 750px){
+        flex-direction: column;
+    }
+
 `
 const StyledInput = styled.div`
     display: flex;
@@ -88,6 +101,10 @@ const StyledInput = styled.div`
     margin: 0 3%;
     width:50%;
     font-size: calc(2px + 1.3vw);
+
+    @media screen and (max-width: 750px){
+        width:100%; 
+    }
     
     input{
         border-radius: 7px;
@@ -113,7 +130,13 @@ const StyledOutput = styled.p`
     border-radius:5px;
     width:50%;
 
-    color: ${props=> props.color === true ? "red": "black"};
+    &.Red{
+        color: red;
+    }
+    
+    &.Black{
+        color: black;
+    }
 `
 const StyledCalcElementButton = styled.button`
     margin:3%;
@@ -134,6 +157,16 @@ export default function Projects(){
     const [output, setOutput] = useState("");
     const [isRed, setColor] = useState(false);
 
+    useEffect(()=>
+    {
+            if(Number(output) <0)
+                setColor(true);
+            else
+                setColor(false);
+            console.log("isRed: "+isRed);
+            console.log("Output: " + Number(output));
+    },[output]);
+
     function clearFunction()
     {
         setInput1("");
@@ -141,36 +174,24 @@ export default function Projects(){
         setOutput("");
     }
 
-    function isNegative()
-    {
-        if(Number(output) <0)
-            setColor(true);
-        else
-            setColor(false);
-    }
-
     function addition()
     {
         setOutput(String(Number(input1)+ Number(input2)));
-        isNegative();
     }
 
     function substraction()
     {
         setOutput(String(Number(input1)- Number(input2)));
-        isNegative();
     }
 
     function multiplication()
     {
         setOutput(String(Number(input1) * Number(input2)));
-        isNegative();
     }
 
     function division()
     {
         setOutput(String(Number(input1)/ Number(input2)));
-        isNegative();
     }
 
     function power()
@@ -193,7 +214,6 @@ export default function Projects(){
             ans = 1/ans;
 
         setOutput(String(ans));
-        isNegative();
     }
 
     return(
@@ -341,7 +361,7 @@ export default function Projects(){
                         </StyledCalcElement>
                         <StyledCalcElement>
                             <p>Result:</p>
-                            <StyledOutput color ={isRed}>{output}</StyledOutput>
+                            <StyledOutput className={isRed ? "Red": "Black"}>{output}</StyledOutput>
                         </StyledCalcElement>
                         <StyledCalcElement>
                             <StyledCalcElementButton onClick={addition}> + </StyledCalcElementButton>
@@ -355,23 +375,3 @@ export default function Projects(){
         </>
     )
 }
-
-// @media screen and (max-width: 750px){
-//     .one-project{
-//         flex-direction: column;
-//     }
-//     .one-project img{
-//         margin: auto;
-//     }
-    
-//     .toolkit{
-//         flex-direction: column;
-//     }
-
-//     .calc-element{
-//         flex-direction: column;
-//     }
-//     .input{
-//         width: 100%;
-//     }
-// }
