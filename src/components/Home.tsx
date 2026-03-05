@@ -78,7 +78,7 @@ export default function Home(){
                         science, digital photography,
                         cultural discoveries and science
                         in general.</p>
-                    <ViewMoreButton href ="/about-me" text= "Discover More About Me"/>
+                    <ViewMoreButton to ="/about-me" text= "Discover More About Me"/>
                 </TextSection>
             </StyledPres>
             <StyledOverview>
@@ -92,7 +92,7 @@ export default function Home(){
                         <h5>3D Escape game</h5>
                         <p>A video game where escaping from the subway is the goal.</p>
                     </StyledOneProject>
-                    <ViewMoreButton href = "/projects" text= "View All Projects"/>
+                    <ViewMoreButton to = "/projects" text= "View All Projects"/>
                     <StyledOneProject>
                         <StyledOneProjectImg src = "./wesbite artist.png" alt = "Picture of a website"/>
                         <h5>Website with WordPress</h5>
@@ -131,7 +131,7 @@ export default function Home(){
                         <p>Unity</p>
                     </StyledGridElement>
                 </StyledGrid>
-                <ViewMoreButton href = "/experiences" text = "Discover All My Experience Here"/>
+                <ViewMoreButton to = "/experiences" text = "Discover All My Experience Here"/>
             </StyledOverview>
             <StyledOverview>
                 <StyledOverviewTitle>
@@ -142,7 +142,7 @@ export default function Home(){
                     <StyledOneCertif>
                         <StyledOneCertifImg src = "./cambridge logo.png" alt = "Cambridge certification"/>
                     </StyledOneCertif>
-                    <ViewMoreButton href = "/certifications" text ="View All  Certifications"/>
+                    <ViewMoreButton to = "/certifications" text ="View All  Certifications"/>
                     <StyledOneCertif>
                         <StyledOneCertifImg src = "./instituto-cervantes.png" alt = "Instituto Cervantes certification"/>
                     </StyledOneCertif>

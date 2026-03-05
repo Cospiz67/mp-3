@@ -250,9 +250,9 @@ export default function Projects(){
                         <ToolkitLi><p>Level Design</p></ToolkitLi>
                     </Toolkit>
                     <StyledOneProject>
-                        <ViewMoreButton target= {true} href="https://www.youtube.com/watch?v=CKALwMykcis" text="Watch The Trailer Here"/>
-                        <ViewMoreButton target= {true} href="https://www.instagram.com/head4che.prod.co/" text="Go To Our Instagram Page"/>
-                        <ViewMoreButton target= {true} href="https://head4che-prod.github.io/" text="Visit Our Website"/>
+                        <ViewMoreButton target= {true} to="https://www.youtube.com/watch?v=CKALwMykcis" text="Watch The Trailer Here"/>
+                        <ViewMoreButton target= {true} to="https://www.instagram.com/head4che.prod.co/" text="Go To Our Instagram Page"/>
+                        <ViewMoreButton target= {true} to="https://head4che-prod.github.io/" text="Visit Our Website"/>
                     </StyledOneProject>
                     <StyledOneProject>
                         <StyledOneProjectImg src = "./wesbite artist.png" alt = "Picture of a website"/>
@@ -276,7 +276,7 @@ export default function Projects(){
                         <ToolkitLi><p>Communicate</p></ToolkitLi>
                     </Toolkit>
                     <StyledOneProject>
-                        <ViewMoreButton target= {true} href="https://marieblancheiraldi.wordpress.com/" text="Visit The Website"/>
+                        <ViewMoreButton target= {true} to="https://marieblancheiraldi.wordpress.com/" text="Visit The Website"/>
                     </StyledOneProject>
                     <StyledOneProject>
                         <ImgCapigame src = "./capigame.png" alt = "Picture of Capigame"/>
@@ -319,7 +319,7 @@ export default function Projects(){
                         <ToolkitLi><p>Visual Coding And Scripting</p></ToolkitLi>
                     </Toolkit>
                     <StyledOneProject>
-                        <ViewMoreButton target= {true} href="https://gd.games/games/2de620ae-f930-4bf6-87fb-832e2b2ba3c8" text ="Play To My Game"/>
+                        <ViewMoreButton target= {true} to="https://gd.games/games/2de620ae-f930-4bf6-87fb-832e2b2ba3c8" text ="Play To My Game"/>
                     </StyledOneProject>
                     <StyledOneProject>
                         <StyledOneProjectImg src = "./ocr.png" alt = "Optical Character Recognition Software Program"/>

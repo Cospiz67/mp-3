@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router";
 
-const StyledButton= styled.a`
+const StyledButton= styled(Link)`
     margin: auto;
     border-radius: 25px;
     border: 2px solid rgb(55, 97, 189);
@@ -14,8 +15,8 @@ const StyledButton= styled.a`
     }
 `
 
-export default function ViewMoreButton(props:{href: string, text: string, target?: boolean}){
+export default function ViewMoreButton(props:{to: string, text: string, target?: boolean}){
     return(
-        <StyledButton target={props.target === true? "_blank": "_self"} href={props.href}>{props.text}</StyledButton>
+        <StyledButton target={props.target === true? "_blank": "_self"} to={props.to}>{props.text}</StyledButton>
     )
 }
