@@ -350,11 +350,11 @@ export default function Projects(){
                         <StyledCalcElement>
                             <StyledInput>
                                 <label htmlFor= "first-input">Enter first number: </label>
-                                <input id ="first-input"placeholder ="Enter first number" value={input1} onChange={(e)=>setInput1(e.target.value)}/>
+                                <input placeholder ="Enter first number" value={input1} onChange={(e)=>setInput1(e.target.value)}/>
                             </StyledInput>
                             <StyledInput>
                                 <label htmlFor= "second-input">Enter second number: </label>
-                                <input id ="second-input"placeholder ="Enter second number" value ={input2} onChange={(e)=>setInput2(e.target.value)}/>
+                                <input placeholder ="Enter second number" value ={input2} onChange={(e)=>setInput2(e.target.value)}/>
                             </StyledInput>  
                         </StyledCalcElement>
                         <StyledCalcElement>
